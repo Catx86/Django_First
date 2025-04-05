@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ flatpage.title }}</title>
-</head>
-<body>
+{% extends 'flatpages\default.html' %}
+
+{% block content %}
+    <h2>{{ flatpage.title }}</h2>
+    <hr>
+
     {{ flatpage.content }}
-    {% include 'flatpages\inc.html' %}
-    <h2> We got it!</h2>
-</body>
-</html>
+    <hr>
+{% endblock content %}
